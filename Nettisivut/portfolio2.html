@@ -5,41 +5,51 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins|Lora">
         
         <style>
-            body,
-            h1,
-            h2,
-            h3,
-            h4,
-            h5 {
-                font-family: "Raleway", sans-serif
+            body, h1, h2, h3, h4, h5 {
+                font-family: "Poppins", sans-serif; /* Changed to Poppins for a modern and clean look */
             }
 
-            .w3-third img {
-                margin-bottom: -6px;
-                opacity: 0.8;
-                cursor: pointer
+            .w3-third img, .w3-quarter img {
+                width: 100%;
+                max-height: 250px;
+                object-fit: cover;
+                margin-bottom: 10px;
+                opacity: 0.9;
+                cursor: pointer;
+                border-radius: 10px;
+                transition: transform 0.3s ease, opacity 0.3s ease;
             }
 
-            .w3-third img:hover {
-                opacity: 1
+            .w3-third img:hover, .w3-quarter img:hover {
+                opacity: 1;
+                transform: scale(1.05);
+            }
+
+            .w3-container h5, .w3-container h4 {
+                margin-top: 10px;
+                font-weight: bold;
+                color: #f1f1f1;
+                font-family: "Lora", serif; /* Added Lora for headers to create contrast */
+            }
+
+            .w3-content p {
+                font-size: 14px;
+                line-height: 1.5;
+                color: #ddd;
             }
         </style>
     </head>
-<body class="w3-black" style="max-width:100vw">
-      
+<body class="w3-black">
+    
     <!-- Sidebar/menu -->
     <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center"
-        style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
-        <h3 class="w3-padding-64 w3-center"><b>Jari's<br>Portfolio</b></h3>
-        <a href="javascript:void(0)" onclick="w3_close()"
-            class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
+        style="z-index:3;width:300px;font-weight:bold" id="mySidebar">
+        <h3 class="w3-padding-64 w3-center"><b>Jari's Portfolio</b></h3>
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
         <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT ME</a>
-        
-        
-    
     </nav>
 
     <!-- Top menu on small screens -->
@@ -48,174 +58,98 @@
         <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
     </header>
 
-    <!-- Overlay effect when opening sidebar on small screens -->
-    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
-        title="close side menu" id="myOverlay"></div>
-
-    <!-- !PAGE CONTENT! -->
     <div class="w3-main" style="margin-left:300px">
-
-        <!-- Push down content on small screens -->
         <div class="w3-hide-large" style="margin-top:83px"></div>
-
-        <!-- Pagination -->
-        <div class="w3-center w3-padding-32">
-            
-        </div>
-
-        <!-- Modal for full size images on click-->
-        <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
-            <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
-            <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-                <img id="img01" class="w3-image">
-                <p id="caption"></p>
-            </div>
-        </div>
-
+        
         <!-- About section -->
-        <div class="w3-container w3-black w3-center w3-black w3-padding-32" id="about">
-            <h5><b>About Me</b></h5>
-            <img src="Images/Lärvi.JPG" alt="Me" class="w3-image w3-padding-32" width="350" height="350">
+        <div class="w3-container w3-center w3-padding-32" id="about">
+            <h5>About Me</h5>
+            <img src="Images/Lärvi.JPG" alt="Me" class="w3-image w3-padding-32" width="250" height="250" style="border-radius: 0;">
             <div class="w3-content w3-justify" style="max-width:400px">
-                <p>Greetings! I am Jari, a dedicated game developer hailing from Oulu.<p>
-                <h4 class="w3-padding-16">Technical Skills</h4>
-                <p>Proficient in: Unity, Visual Studio, Blender, MySQL, VS-Code, GitHub and Microsoft Office. </p>
-                <p>Good knowledge in programming languages: C# and GdScript.</p>
-                <p>I'm now learning C++</p>
-                <p>Competent with game engines including:  Unity, Godot, and GameMaker 2</p>
-                <p></p>
-                <p>I completed my education as a software developer with a specialization in game development in June 2023. Throughout my academic journey, I learned to use Unity, dedicating both my study and leisure time to learning its intricacies.
-                <p>In August 2024, I started my studies at KAMK University of Applied Sciences, and I'm going to specialize in game programming</p>
-                <p>I possess an unwavering commitment to the field of game development. While I am at the initial stages of my career, my passion knows no bounds. I would greatly appreciate any constructive feedback.</p>
-                
-                <div>
-                <h4>
-                &#9993; <a href = "mailto: jari.haapalainen92@gmail.com">Send Email</a>
-                </h4>
-                <h4>
-                &#128222;  <a href="tel:+358443203942">Call me</a>
-                </h4>
-                <h4>
-                &#128203; <a href="Images/JariCV.pdf" download> Download Resume</a>
-                </h4>
-              
-                </div>
-        
-               
+                <p>Greetings! I am Jari, a dedicated game developer hailing from Oulu.</p>
+                <h4>Technical Skills</h4>
+                <p>Proficient in: Unity, Visual Studio, Blender, MySQL, VS-Code, GitHub, and Microsoft Office.</p>
+                <p>Programming: C# and GdScript. Currently learning C++.</p>
+                <p>Engines: Unity, Godot, and GameMaker 2.</p>
+                <p>I'm passionate about game development and always eager to learn.</p>
+                <h4>Contact Me</h4>
+                <p>&#9993; <a href="mailto:jari.haapalainen92@gmail.com">Email Me</a></p>
+                <p>&#128222; <a href="tel:+358443203942">Call Me</a></p>
+                <p>&#128203; <a href="Images/JariCV.pdf" download>Download Resume</a></p>
             </div>
-            <div class="w3-center">
-                <h5>Presenting my projects here<h5>
         </div>
-        
 
-        
-             <!-- First Photo Grid-->
-  <div class="w3-row-padding w3-padding-16 w3-center" id="asteroid">
-    <div class="w3-quarter">
-      <img src="Images/Asteroids.gif" alt="asteroid" style="width:100%">
-      <h5>I'm excited to introduce my latest project</h5>
-      <p>an asteroid game that I've been diligently crafting. You're invited to experience the thrills and challenges it offers by downloading it from my GitHub page. Dive into a world of space and destroy asteroids. Your feedback is invaluable in refining this game, and I can't wait for you to give it a try!.</p> <a href="https://github.com/Keimo92/Space-Ship-Shooter">Full game here!</a>
-    </div>
-    <div class="w3-quarter">
-      <img src="Images/ShipExplode.gif" alt="Asteroid" style="width:100%">
-      <h4>Presenting a collection of pixel animations meticulously crafted for the game.</h4> 
-      <p></p> <a href="https://github.com/Keimo92/AsteroidVol2">Source code of the asteroid game can be found here.</a>
-    </div>
-    <div class="w3-quarter">
-      <img src="Images/8Bit bird.gif" alt="Berries" style="width:60%">
-      <h4>8bit bird.</h4>
-      <p>I recently developed a simple Flappy Bird-inspired game in a single night as a creative endeavor during my leisure time. The game now includes mobile input functionality. This project is shared in GitHub.</p>
-    </div>
-    <div class="w3-quarter">
-      <img src="Images/passthrough2.gif" alt="passthrough" style="width:100%">
-      <h4>FabLab Internship</h4>
-      <p>This was client based project. I had to mix virtual-reality and Augmented reality.</p>
-    </div>
-  </div>
-  
-  <!-- Second Photo Grid-->
-  <div class="w3-row-padding w3-padding-16 w3-center">
-    <div class="w3-quarter">
-      <img src="Images/passthrough.gif" alt="Pass" style="width:100%">
-      <h4>FabLab Internship</h4>
-      <p>Showing same features from the project i made in different perspective.</p>
-    </div>
-    <div class="w3-quarter">
-      <img src="Images/Rottademo kesken.jpg" alt="Rat" style="width:100%">
-      <h4>OSAO Game developer cource</h4>
-      <p>I was programmer in this project. The rat was the player and you had to survive the rising water levels.</p>
-    </div>
-    <div class="w3-quarter">
-      <img src="Images/sädepyssyhitbox toimi2.gif" alt="Gun" style="width:100%">
-      <h4>MeKiwi Internship</h4>
-      <p>In this project i created simple raycasting feature with particle system.</p>
-    </div>
-    <div class="w3-quarter">
-      <img src="Images/valomiekka uus.gif" alt="Saber" style="width:100%">
-      <h4>MeKiwi Internship</h4>
-      <p>I made lightsaber which follows the players controllers vector and it makes the sound. I also animated it, when you press oculus quest controller button. It activates the saber</p>
-    </div>
-  </div>
+        <!-- Project Section -->
+        <div class="w3-center">
+            <h5>My Projects</h5>
+        </div>
 
-  <!-- Third Photo Grid-->
-  <div class="w3-row-padding w3-padding-16 w3-center">
-    <div class="w3-quarter">
-      <img src="Images/SimpleAiBehavior.gif" alt="AI_Behavior" style="width:100%">
-      <h4>2D Shooter Project </h4>
-      <p>I Developed simple AI which shoots and follows the player and it has 4 different animations i made with Piskel Web App</p>
-      <p></p><a href="https://keimo.itch.io/everstar">You can play the game now in Itch.io</a>
-    </div>
-    <div class="w3-quarter">
-      <img src="Images/Enemydie.gif" alt="Enemy_Die" style="width:100%">
-      <h4>2D Shooter </h4>
-      <p>Death animation of enemy. I tried to recreate animation from Doom game. Im very happy with results</p>
-    </div>
-    <div class="w3-quarter">
-      <img src="Images/RuleTile.gif" alt="RuleTile" style="width:100%">
-      <h4>2D shooter Level Design</h4>
-      <p>In the development of this game, I have effectively integrated the RuleTile system, a community-created tool designed for efficient and precise map design.</p>
-    </div>
-    <div class="w3-quarter">
-      <img src="Images/fadeIn.gif" alt="FadeIn" style="width:100%">
-      <h4>Fade in effect when exiting the level.</h4>
-      <p>I changed the FOV of camera to get this kind of effect + i started rotating the camera so its like spinning through the space</p>
-    </div>
-    </div>
-    <div class="w3-quarter">
-      <img src="Images/Abyssal Ambush.gif" alt="PixelJam2023" style="width:100%">
-      <h4>Pixel Jam 2023</h4>
-      <p>We made cave shooter game. You control spaceship in caves. I was programmer here and level designer. We created Fog of war system in the game, using raycast which check's if there is tiles revealed already or not. It was challenging to create, but we are happy about the results. Also Simple AI that shoots and follows the player.</p>
-    <p></p> <a href="https://keimo.itch.io/abyssal-ambush"> You can try the game on itch.io</a>
-    </div>
-    
-   
+        <div class="w3-row-padding w3-padding-16 w3-center">
+            <div class="w3-quarter">
+                <img src="Images/Asteroids.gif" alt="Asteroid">
+                <h4>Asteroids Prototype</h4>
+                <p>A space shooter game under development. Playable on GitHub.</p>
+                <a href="https://github.com/Keimo92/Space-Ship-Shooter">Full game here!</a>
+            </div>
+            <div class="w3-quarter">
+                <img src="Images/8Bit bird.gif" alt="8Bit Bird">
+                <h4>8Bit Bird</h4>
+                <p>Flappy Bird-inspired game created in one night with mobile support.</p>
+            </div>
+            <div class="w3-quarter">
+                <img src="Images/passthrough2.gif" alt="FabLab Internship">
+                <h4>FabLab Internship</h4>
+                <p>Mixed reality project combining VR and AR.</p>
+            </div>
+            <div class="w3-quarter">
+                <img src="Images/valomiekka uus.gif" alt="Lightsaber">
+                <h4>MeKiwi Internship</h4>
+                <p>Developed a lightsaber system with sound and animations.</p>
+            </div>
+        </div>
 
-        <!-- End page contet -->
-   
-        
-    <script>
-        // Script to open and close sidebar
-        function w3_open() {
-            document.getElementById("mySidebar").style.display = "block";
-            document.getElementById("myOverlay").style.display = "block";
-        }
-
-        function w3_close() {
-            document.getElementById("mySidebar").style.display = "none";
-            document.getElementById("myOverlay").style.display = "none";
-        }
-
-        // Modal Image Gallery
-        function onClick(element) {
-            document.getElementById("img01").src = element.src;
-            document.getElementById("modal01").style.display = "block";
-            var captionText = document.getElementById("caption");
-            captionText.innerHTML = element.alt;
-        }
-
-    </script>
-
-
+        <div class="w3-row-padding w3-padding-16 w3-center">
+            <div class="w3-quarter">
+                <img src="Images/SimpleAiBehavior.gif" alt="AI Behavior">
+                <h4>2D Shooter AI</h4>
+                <p>AI that follows and shoots at the player with animations.</p>
+                <a href="https://keimo.itch.io/everstar">Play on Itch.io</a>
+            </div>
+            <div class="w3-quarter">
+                <img src="Images/RuleTile.gif" alt="RuleTile">
+                <h4>Level Design</h4>
+                <p>Integrated RuleTile system for efficient map design.</p>
+            </div>
+            <div class="w3-quarter">
+                <img src="Images/fadeIn.gif" alt="FadeIn Effect">
+                <h4>Camera Transition Effect</h4>
+                <p>Created an FOV and rotation-based fade-in effect.</p>
+            </div>
+            <div class="w3-quarter">
+                <img src="Images/Abyssal Ambush.gif" alt="Pixel Jam 2023">
+                <h4>Pixel Jam 2023</h4>
+                <p>Worked on a cave shooter game with fog-of-war mechanics.</p>
+                <a href="https://keimo.itch.io/abyssal-ambush">Try it on Itch.io</a>
+            </div>
+            <div class="w3-row-padding w3-padding-16 w3-center">
+              <div class="w3-quarter">
+                  <video width="100%" controls>
+                      <source src="Images/BuumiDoomi.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                  </video>
+                  <h4>Technology Workshop Project</h4>
+                  <p>We made a PS1-style FPS shooter in school in just 2 months. The game will be added to Itch.io later.</p>
+              </div>
+              <div class="w3-quarter">
+                <video width="100%" controls>
+                    <source src="Images/LiquidLeap.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h4>Game Jam 2024</h4>
+                <p>Aqua themed pixel game.</p>
+                <a href="https://keimo.itch.io/liquid-leap">Try it on Itch.io</a>
+            </div>
+          </div>
+    </div>
 </body>
-
 </html>
