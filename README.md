@@ -1,2 +1,0 @@
-# PortfolioUpdate
-My updated portfolio
