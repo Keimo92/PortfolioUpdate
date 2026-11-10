@@ -14,7 +14,7 @@
             font-family: "Poppins", sans-serif;
         }
 
-        /* Profile picture */
+        
         .profile-image {
             width: 250px;
             height: 450px;
@@ -24,7 +24,7 @@
             margin: 32px auto;
         }
 
-        /* About section */
+        
         .w3-container h5,
         .w3-container h4 {
             margin-top: 10px;
@@ -39,7 +39,7 @@
             color: #ddd;
         }
 
-        /* PROJECT GRID */
+       
         .project-grid {
             display: grid;
             grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -48,13 +48,13 @@
             align-items: start;
         }
 
-        /* Individual project */
+       
         .project-card {
             text-align: center;
             min-width: 0;
         }
 
-            /* All project images */
+          
             .project-card img {
                 display: block;
                 width: 100%;
@@ -71,13 +71,19 @@
                     transform: scale(1.05);
                 }
 
-            /* Project videos */
+       
+                .project-card img.rollusion-image {
+                    object-fit: contain;
+                    background-color: #000;
+                }
+
+           
             .project-card video {
                 display: block;
                 width: 100%;
                 height: 220px;
                 object-fit: contain;
-                background: #111;
+                background-color: #111;
                 border-radius: 10px;
                 margin-bottom: 10px;
             }
@@ -96,14 +102,13 @@
                 overflow-wrap: break-word;
             }
 
-        /* Medium screens */
+       
         @media (max-width: 1250px) {
             .project-grid {
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }
         }
 
-        /* Mobile screens */
         @media (max-width: 600px) {
             .project-grid {
                 grid-template-columns: 1fr;
@@ -114,7 +119,7 @@
 
 <body class="w3-black">
 
-    <!-- Sidebar -->
+    
     <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center"
          style="z-index:3;width:300px;font-weight:bold"
          id="mySidebar">
@@ -142,28 +147,29 @@
         </a>
     </nav>
 
-    <!-- Mobile header -->
+  
     <header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
         <span class="w3-left w3-padding">Jari's Portfolio</span>
         <a href="javascript:void(0)"
            class="w3-right w3-button w3-white"
-           onclick="w3_open()">
+           onclick="w3_open()"
+           aria-label="Open navigation menu">
             ☰
         </a>
     </header>
 
-    <!-- Main content -->
+   
     <div class="w3-main" style="margin-left:300px">
 
         <div class="w3-hide-large" style="margin-top:83px"></div>
 
-        <!-- About section -->
+       
         <div class="w3-container w3-center w3-padding-32" id="about">
 
             <h5>About Me</h5>
 
             <img src="Images/Lärvi.JPG"
-                 alt="Me"
+                 alt="Profile picture"
                  class="w3-image profile-image">
 
             <div class="w3-content w3-justify" style="max-width:400px">
@@ -191,7 +197,7 @@
             </div>
         </div>
 
-        <!-- Projects -->
+       
         <section id="projects">
 
             <div class="w3-center">
@@ -200,7 +206,7 @@
 
             <div class="project-grid">
 
-                <!-- Asteroids -->
+              
                 <div class="project-card">
                     <img src="Images/Asteroids.gif" alt="Asteroids">
 
@@ -213,7 +219,7 @@
                     </a>
                 </div>
 
-                <!-- 8Bit Bird -->
+               
                 <div class="project-card">
                     <img src="Images/8Bit bird.gif" alt="8Bit Bird">
 
@@ -222,7 +228,7 @@
                     <p>Flappy Bird-inspired game created in one night with mobile support.</p>
                 </div>
 
-                <!-- FabLab -->
+               
                 <div class="project-card">
                     <img src="Images/passthrough2.gif" alt="FabLab Internship">
 
@@ -231,7 +237,7 @@
                     <p>Mixed reality project combining VR and AR.</p>
                 </div>
 
-                <!-- MeKiwi -->
+            
                 <div class="project-card">
                     <img src="Images/valomiekka uus.gif" alt="Lightsaber">
 
@@ -240,7 +246,7 @@
                     <p>Developed a lightsaber system with sound and animations.</p>
                 </div>
 
-                <!-- 2D Shooter -->
+               
                 <div class="project-card">
                     <img src="Images/SimpleAiBehavior.gif" alt="AI Behavior">
 
@@ -253,7 +259,7 @@
                     </a>
                 </div>
 
-                <!-- Level Design -->
+              
                 <div class="project-card">
                     <img src="Images/RuleTile.gif" alt="RuleTile">
 
@@ -262,7 +268,7 @@
                     <p>Integrated RuleTile system for efficient map design.</p>
                 </div>
 
-                <!-- Orbital Point -->
+            
                 <div class="project-card">
                     <img src="Images/OrbitalPoint.png" alt="Orbital Point">
 
@@ -275,7 +281,7 @@
                     </a>
                 </div>
 
-                <!-- Pixel Jam -->
+          
                 <div class="project-card">
                     <img src="Images/Abyssal Ambush.gif" alt="Pixel Jam 2023">
 
@@ -288,7 +294,6 @@
                     </a>
                 </div>
 
-                <!-- BuumiDoomi -->
                 <div class="project-card">
                     <video controls preload="metadata">
                         <source src="Images/BuumiDoomi.mp4" type="video/mp4">
@@ -304,7 +309,7 @@
                     </a>
                 </div>
 
-                <!-- Liquid Leap -->
+           
                 <div class="project-card">
                     <video controls preload="metadata">
                         <source src="Images/LiquidLeap.mp4" type="video/mp4">
@@ -320,9 +325,9 @@
                     </a>
                 </div>
 
-                <!-- Red Stage -->
+          
                 <div class="project-card">
-                    <img src="Images/RedStage.png" alt="Red Stage">
+                    <img src="Images/RedStage.png" alt="Red Stage Entertainment">
 
                     <h4>Game Programmer Trainee at Red Stage Entertainment</h4>
 
@@ -346,7 +351,7 @@
                     </p>
                 </div>
 
-                <!-- DeadLucre -->
+       
                 <div class="project-card">
                     <img src="Images/DLP.png" alt="DeadLucre">
 
@@ -359,7 +364,6 @@
                     </a>
                 </div>
 
-                <!-- Lurkki -->
                 <div class="project-card">
                     <img src="Images/lurkki.jpg" alt="Lurkki">
 
@@ -372,9 +376,13 @@
                     </a>
                 </div>
 
-                <!-- Rollusion -->
+        
                 <div class="project-card">
-                    <img src="Images/rollusion.jpg" alt="Rollusion">
+
+              
+                    <img src="Images/rollusion.jpg"
+                         alt="Rollusion"
+                         class="rollusion-image">
 
                     <h4>Game Project Studies 2</h4>
 
@@ -394,12 +402,11 @@
                 </div>
 
             </div>
-            <!-- End project grid -->
+      
 
         </section>
 
     </div>
-    <!-- End main content -->
 
     <script>
         function w3_open() {
